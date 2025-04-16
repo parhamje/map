@@ -21,6 +21,7 @@ header {
 .header-container {
   width: 95%;
   max-width: 1200px;
+  height: 70px;
   background-color: #c62828;
   display: flex;
   justify-content: space-between;
@@ -29,11 +30,12 @@ header {
   margin: 0 auto;
   border-radius: 50px;
   position: relative;
+  direction: ltr;
 }
 
 .header-container .logo {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -42,8 +44,8 @@ header {
   padding: 10px;
   border-radius: 50%;
   position: absolute;
-  top: -35px;
-  left: 20px;
+  top: -13px;
+  left: 90%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -55,10 +57,12 @@ header {
 }
 
 .nav-link {
-  padding-top: 10px;
+  margin-top: -8px;
+  margin-left: 40%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  direction: rtl;
 }
 
 .nav-link a {
@@ -288,8 +292,8 @@ path:hover {
   .header-container .logo {
     width: 70px;
     height: 70px;
-    top: -7px;
-    left: 83%;
+    top: -15px;
+    left: 80%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -305,7 +309,7 @@ path:hover {
     
   }
   .nav-link {
-    padding-top: 2px;
+    margin-top: 0;
     padding-left: 55px;
     flex-wrap: wrap;
 
