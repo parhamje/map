@@ -63,6 +63,13 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   direction: rtl;
+  gap: 10px;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
 }
 
 .nav-link a {
@@ -70,8 +77,30 @@ header {
   text-decoration: none;
   padding: 10px 15px;
   display: inline-block;
+  position: relative; 
 }
 
+.nav-link a:hover,
+.nav-link a.active {
+  color: #E5CD8A;
+}
+
+.nav-link a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #E5CD8A;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link a:hover::before,
+.nav-link a.active::before { 
+  width: 100%;
+  left: 0;
+}
 /* SVG Heading */
 .svg-head {
   width: 100%;
@@ -655,3 +684,6 @@ path:hover {
     padding: 12px 15px;
   }
 }
+
+
+
