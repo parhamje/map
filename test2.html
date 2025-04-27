@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/citys.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+          <div class="nav-container">
+            <nav class="nav-link">
+              <a href="#" class="active">
+                <i class="fas fa-home"></i>
+                خانه
+              </a>
+  
+              <a href="#">
+                <i class="fas fa-phone"></i>
+                تماس با ما
+              </a>
+              <!-- Add more links with icons as needed -->
+            </nav>
+          </div>
+          
+          <div class="logo">
+            <img src="img/logo.png" alt="تبریز مپ" />
+            <p>تبریز مپ</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+      <a href="test.html" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i>
+        بازگشت
+    </a>
+    <div class="svg-head">
+        <h1>نقشه باروق</h1>
+      </div>
+        <div class="map-container">
+            <img src="img/barog.webp" alt="barog" class="map-image" />
+        </div>
+        <!-- search bar -->
+        <!-- <div class="search-bar">
+          <input type="text" placeholder="جستجو..." id="searchInput">
+          <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+      </div> -->
+        <div class="svg-head">
+            <h1>اطلاعات باروق</h1>
+          </div>
+        <div class="data-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>مساحت</td>
+                        <td>۵۲۵۲۵۵۵ کیلومتر</td>
+                    </tr>
+                    <tr>
+                        <td>جمعیت</td>
+                        <td>۵۴۵۴</td>
+                    </tr>
+                    <tr>
+                        <td>تعداد شهر</td>
+                        <td>۲۳</td>
+                    </tr>
+                    <tr>
+                        <td>تعداد روستا</td>
+                        <td>۱۲</td>
+                    </tr>
+                    <tr>
+                        <td>پلیس</td>
+                        <td>۵۵۴</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="svg-head">
+            <h1>گزارشات</h1>
+          </div>
+
+        <div class="reports-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>آیدی گزارش</th>
+                        <th>موضوع گزارش</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>۱۲۳۴</td>
+                        <td>گزارش خرابی جاده</td>
+                        <td><button class="action-button">مشاهده</button></td>
+                    </tr>
+                    <tr>
+                        <td>۲۳۴۵</td>
+                        <td>گزارش قطعی آب</td>
+                        <td><button class="action-button">مشاهده</button></td>
+                    </tr>
+                    <tr>
+                        <td>۳۴۵۶</td>
+                        <td>گزارش مشکل برق</td>
+                        <td><button class="action-button">مشاهده</button></td>
+                    </tr>
+                    <tr>
+                        <td>۴۵۶۷</td>
+                        <td>گزارش مشکل امنیتی</td>
+                        <td><button class="action-button">مشاهده</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <button class="submit-button" id="openModalBtn">ثبت گزارش جدید</button>
+    </div>
+
+    <!-- modal -->
+    <div class="modal" id="reportModal">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h2>ثبت گزارش جدید</h2>
+              <button class="close-button" id="closeModalBtn">&times;</button>
+          </div>
+          
+          <form id="reportForm">
+              <div class="form-group">
+                  <label for="reportType">نوع گزارش:</label>
+                  <select id="reportType" name="reportType" required>
+                      <option value="">انتخاب کنید</option>
+                      <option value="road">خرابی جاده</option>
+                      <option value="water">قطعی آب</option>
+                      <option value="electricity">مشکل برق</option>
+                      <option value="security">مشکل امنیتی</option>
+                      <option value="other">سایر موارد</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <label for="reportTitle">عنوان گزارش:</label>
+                  <input type="text" id="reportTitle" name="reportTitle" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="reportDescription">شرح گزارش:</label>
+                  <textarea id="reportDescription" name="reportDescription" required></textarea>
+              </div>
+            
+              <div class="form-buttons">
+                  <button type="button" class="cancel-button" id="cancelBtn">انصراف</button>
+                  <button type="submit" class="save-button">ثبت گزارش</button>
+              </div>
+          </form>
+      </div>
+  </div>
+    <!-- end of modal -->
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="index.html">خانه</a>
+              <a href="about.html">درباره ما</a>
+              <a href="contact.html">تماس با ما</a>
+              <a href="map.html">نقشه</a>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <p>تمامی حقوق محفوظ است <span>&copy; ۱۴۰۴</span></p>
+        </div>
+      </footer>
+
+
+
+
+      <script src="js/script.js"></script>
+</body>
+</html>

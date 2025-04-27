@@ -226,6 +226,28 @@ header {
     }
   
   }
+  .svg-head h1 {
+    font-size: 28px;
+    color: var(--accent-color);
+    margin: 0 0 50px 0;
+    padding: 0 20px 10px;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .svg-head h1::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+  }
 svg {
   width: 90%;
   max-width: 600px;
@@ -233,6 +255,13 @@ svg {
   margin: 50px auto ;
   display: block;
   filter: drop-shadow(0 5px 15px rgba(229, 205, 146, 0.2));
+}
+.map-image{
+  width: 900px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
 }
 .container {
     max-width: 1000px;
@@ -289,6 +318,81 @@ svg {
     font-weight: bold;
     color: #000;
 }
+/* Search Bar Styles - Professional Enhanced */
+.search-bar {
+  display: flex;
+  margin: 0 auto 28px auto;
+  max-width: 500px;
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1a1a1a, #252525);
+  padding: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 
+              0 0 0 1px rgba(229, 205, 146, 0.08),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+              0 0 0 2px rgba(229, 205, 146, 0.15),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 15px 20px;
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+.search-bar button {
+  width: 50px;
+  height: 50px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(145deg, var(--accent-color), var(--accent-hover));
+  color: var(--primary-color);
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(145deg, #ebd7a2, var(--accent-color));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button i {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
 
 .data-table {
     background-color: var(--card-bg);
@@ -323,7 +427,17 @@ svg {
 .data-table tr:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
-
+.click_section {
+    cursor: pointer;
+    transition: var(--transition);
+    padding:10px;
+    text-decoration: none;
+    color: var(--text-light);
+}
+.click_section:hover {
+    background-color: rgba(229, 205, 146, 0.1);
+    border-radius: 8px;
+}
 .reports-table {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -486,3 +600,123 @@ svg {
     color: white;
     transform: translateY(-3px);
   }
+  /* ******************************************************** */
+  /* Modal Styles */
+  /* ******************************************************** */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.cancel-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.save-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: bold;
+}
+
+.save-button:hover {
+    background-color: var(--accent-hover);
+}
