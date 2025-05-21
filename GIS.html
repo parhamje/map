@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>تبریز مپ | نقشه تعاملی آذربایجان شرقی</title>
+  </head>
+  <style>
+    #map {
+      border-radius: 50px;  
+      height: calc(100vh - 160px);
+      width: 70%;
+      margin: 0 auto;
+      position: sticky;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="nav-container">
+          <nav class="nav-link">
+            <a href="#" class="active">
+              <i class="fas fa-home"></i>
+              خانه
+            </a>
+
+            <a href="#">
+              <i class="fas fa-phone"></i>
+              تماس با ما
+            </a>
+
+            <a href="#">
+              <i class="fas fa-map"></i>
+              نقشه GIS
+            </a>
+            <!-- Add more links with icons as needed -->
+          </nav>
+        </div>
+
+        <div class="logo">
+          <img src="img/logo.png" alt="تبریز مپ" />
+          <p>تبریز مپ</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="svg-head">
+        <h1>نقشه استان</h1>
+      </div>
+      <div id="map"></div>
+    </main>  
+
+        <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="index.html">خانه</a>
+            <a href="about.html">درباره ما</a>
+            <a href="contact.html">تماس با ما</a>
+            <a href="map.html">نقشه</a>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <p>تمامی حقوق محفوظ است <span>&copy; ۱۴۰۴</span></p>
+      </div>
+    </footer>
+  <!-- اسکریپت Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // مختصات تبریز
+    const map = L.map('map').setView([38.08, 46.29], 13);
+
+    // لایه نقشه از OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // اضافه کردن یک مارکر
+    L.marker([38.0801, 46.2919]).addTo(map)
+      .bindPopup("برج ساعت تبریز")
+      .openPopup();
+  </script>
+  </body>
+</html>
