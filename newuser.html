@@ -31,9 +31,9 @@
       <div class="menu-section">
           <div class="menu-title">منوی اصلی</div>
           <ul class="menu-items">
-          <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> <span>داشبورد</span></a></li>
+          <li><a href="admin.html" ><i class="fas fa-tachometer-alt"></i> <span>داشبورد</span></a></li>
           <li><a href="usermangement.html"><i class="fas fa-users"></i> <span>مدیریت کاربران</span> <span class="badge">12</span></a></li>
-          <li><a href="newuser.html"><i class="fas fa-user-plus"></i> <span>کاربر جدید</span></a></li>
+          <li><a href="#" class="active"><i class="fas fa-user-plus" ></i> <span>کاربر جدید</span></a></li>
           </ul>
       </div>
       
@@ -85,56 +85,51 @@
       </div>
       
       <div class="dashboard-content">
-          <div class="dashboard-stats">
-          <div class="stat-card">
-              <div class="stat-icon user-icon">
-              <i class="fas fa-users"></i>
+        <div class="signup-container">
+            <div class="signup-header">
+              <div class="signup-icon">
+                <i class="fas fa-user-plus"></i>
               </div>
-              <div class="stat-info">
-              <h3>۱,۵۶۲</h3>
-              <p>کاربران</p>
+              <h2>ثبت کاربر جدید</h2>
+              <p>لطفا اطلاعات کاربر جدید را وارد کنید</p>
+            </div>
+            <form class="signup-form">
+              <div class="form-group">
+                <label>نام کاربری</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="username" placeholder="نام کاربری خود را وارد کنید">
+                  <i class="fas fa-user"></i>
+                </div>
               </div>
-          </div>      
-          <div class="stat-card">
-              <div class="stat-icon visit-icon">
-              <i class="fas fa-chart-line"></i>
+              
+              <div class="form-group">
+                <label>ایمیل</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" name="email" placeholder="ایمیل خود را وارد کنید">
+                  <i class="fas fa-envelope"></i>
+                </div>
               </div>
-              <div class="stat-info">
-              <h3>۸,۹۴۵</h3>
-              <p>بازدیدکنندگان</p>
+              
+              <div class="form-group">
+                <label>رمز عبور</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" name="pass" placeholder="رمز عبور خود را وارد کنید">
+                  <i class="fas fa-lock"></i>
+                </div>
               </div>
+              
+              <div class="form-group">
+                <label>شماره تماس</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="phoneNumber" placeholder="شماره تماس خود را وارد کنید">
+                  <i class="fas fa-phone"></i>
+                </div>
+              </div>         
+              <button type="submit" class="signup-btn">ثبت </button>
+            </form>
           </div>
-          </div>  
-          <div class="recent-activity">
-          <div class="activity-card">
-              <div class="activity-header">
-              <h3>فعالیت‌های اخیر</h3>
-              <a href="#" class="view-all">نمایش همه</a>
-              </div>
-              <ul class="activity-list">
-              <li class="activity-item">
-                  <div class="activity-icon" style="color: #3a1c71;">
-                  <i class="fas fa-user-plus"></i>
-                  </div>
-                  <div class="activity-info">
-                  <h4>ثبت نام کاربر جدید</h4>
-                  <p>علی محمدی به سایت اضافه شد</p>
-                  </div>
-                  <div class="activity-time">۵ دقیقه پیش</div>
-              </li>  
-              <li class="activity-item">
-                  <div class="activity-icon" style="color: #ffd166;">
-                  <i class="fas fa-exclamation-circle"></i>
-                  </div>
-                  <div class="activity-info">
-                  <h4>هشدار سیستم</h4>
-                  <p>بروزرسانی نرم افزار در دسترس است</p>
-                  </div>
-                  <div class="activity-time">۵ ساعت پیش</div>
-              </li>
-              </ul>
-          </div>
-          </div>
+        </div>
+      </div>
       </div>
       </div>
   </div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="پنل ادمین" />
+    <meta name="keywords" content="پنل ادمین, مدیریت, داشبورد" />
+    <meta name="author" content="Parham Jenani" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <title>مدیریت کاربران</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>پنل مدیریت</h1>
+        </div>
+        
+        <div class="profile-info">
+            <div class="profile-img">
+            <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-name">
+            <h3>پرهام جنانی</h3>
+            <span>مدیر سیستم</span>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="menu-title">منوی اصلی</div>
+            <ul class="menu-items">
+            <li><a href="admin.html" ><i class="fas fa-tachometer-alt"></i> <span>داشبورد</span></a></li>
+            <li><a href="usermangement.html" class="active"><i class="fas fa-users"></i> <span>مدیریت کاربران</span> <span class="badge">12</span></a></li>
+            <li><a href="newuser.html" ><i class="fas fa-user-plus" ></i> <span>کاربر جدید</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-section">
+            <div class="menu-title">تنظیمات</div>
+            <ul class="menu-items">
+            <li><a href="#"><i class="fas fa-user-cog"></i> <span>پروفایل</span></a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> <span>خروج</span></a></li>
+            </ul>
+        </div>
+        </div>
+
+        <!-- Main Content -->
+      <div class="main-content" id="main-content">
+        <div class="top-bar">
+            <button class="toggle-btn" id="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="user-actions">
+            <div class="action-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="action-btn">
+                <i class="fas fa-envelope"></i>
+                <span class="notification-badge">5</span>
+            </div>
+            <div class="action-btn dropdown">
+                <i class="fas fa-user"></i>
+                <div class="dropdown-menu" id="userDropdown">
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-user-circle"></i>
+                    پروفایل من
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-cog"></i>
+                    تنظیمات
+                </a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    خروج
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="user-table-container">
+            <table class="user-table">
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام کاربری</th>
+                  <th>رمز عبور</th>
+                  <th>ایمیل</th>
+                  <th>شماره تلفن</th>
+                  <th>عملیات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>parham123</td>
+                  <td>******</td>
+                  <td>parham@example.com</td>
+                  <td>09123456789</td>
+                  <td>
+                    <button class="edit-btn">ویرایش</button>
+                    <button class="delete-btn">حذف</button>
+                  </td>
+                </tr>
+                <!-- سطرهای بیشتر -->
+              </tbody>
+            </table>
+          </div>
+          
+</body>
+</html>
